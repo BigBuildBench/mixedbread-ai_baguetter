@@ -1,0 +1,35 @@
+[project]
+name = "baguetter"
+version = "0.1.1"
+description = "Baguetter is a flexible and efficient search engine library implemented in Python. It supports sparse (traditional), dense (semantic), and hybrid retrieval methods."
+authors = [
+    { name = "Mixedbread", email = "support@mixedbread.ai" },
+    { name = "Julius Lipp", email = "julius@mixedbread.ai" },
+    { name = "Sean Lee", email = "sean@mixedbread.ai" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "ipykernel>=6.29.0",
+    "ruff>=0.2.0",
+    "pre-commit>=3.6.0",
+    "uv>=0.2.30",
+    "jupyter>=1.0.0",
+    "notebook>=6.5.4",
+]
+
+[tool.setuptools.packages.find]
+include = ["baguetter", "baguetter.*"]
+
+[tool.setuptools.package-data]
+baguetter = ["py.typed"]
